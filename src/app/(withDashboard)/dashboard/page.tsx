@@ -13,7 +13,7 @@ const DashboardPage = async () => {
       {
         session?.user &&
         <>
-          {" "}
+      
           <h1 className="text-4xl text-center mt-10">
             Welcome {session?.user?.name}
           </h1>
@@ -21,7 +21,7 @@ const DashboardPage = async () => {
             Email: {session?.user?.email}
           </h1>
           <Image
-            src={session?.user?.image}
+            src={session?.user?.image as string}
             alt="user image"
             width={100}
             height={100}
