@@ -6,14 +6,12 @@ const DashboardPage = async () => {
 
   const session = await getServerSession(authOptions)
 
-  console.log(session);
+ 
 
   return (
     <div>
-      {
-        session?.user &&
+      {session?.user && (
         <>
-      
           <h1 className="text-4xl text-center mt-10">
             Welcome {session?.user?.name}
           </h1>
@@ -21,14 +19,17 @@ const DashboardPage = async () => {
             Email: {session?.user?.email}
           </h1>
           <Image
-            src={session?.user?.image as string}
+            src={
+              session?.user?.image ||
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQttE9sxpEu1EoZgU2lUF_HtygNLCaz2rZYHg&s"
+            }
             alt="user image"
             width={100}
             height={100}
             className="rounded-full mx-auto mt-5"
           />
         </>
-      }
+      )}
     </div>
   );
 };

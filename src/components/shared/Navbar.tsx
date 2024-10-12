@@ -5,7 +5,7 @@ import Link from "next/link";
 
 
 type TNavbarProps = {
-  session: Session;
+  session: Session | null ;
 }
 
 const Navbar = ({session}:TNavbarProps) => {
