@@ -82,9 +82,3 @@ Certain routes in this application are protected and can only be accessed by aut
 - Explored session management and redirection using Next.js's built-in `getSession()` and `useSession()` hooks.
 - Middleware integration to protect routes by checking for user authentication.
 
-## License
-
-This project is licensed under the MIT License.
-```
-
-You can customize this as needed based on additional features or details you add to your project!
